@@ -58,7 +58,7 @@ class ConsultationViewModel extends ChangeNotifier {
   List<Obesity> dataset = [];
   KnnClassifier? _classifier;
 
-  int k = 5; 
+  int k = 4; 
   
   // Nilai k untuk KNN
   // Method to convert categorical values to numeric
@@ -517,7 +517,7 @@ class ConsultationViewModel extends ChangeNotifier {
     HasilAkhir.sort((a, b) => a['result'].compareTo(b['result']));
     List<Map<String, dynamic>> terdekat = HasilAkhir.sublist(0, 4);
     for (int i = 0; i < terdekat.length; i++) {
-      print('Tujuh Nilai Terdekat, Baris ke - [${i + 1}] : ${terdekat[i]}');
+      print('Empat Nilai Terdekat, Baris ke - [${i + 1}] : ${terdekat[i]}');
     }
     print('=================================');
 
